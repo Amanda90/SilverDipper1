@@ -151,16 +151,59 @@ footer {
 <div class="nav">
     <div class="logo"><img src="photos/logo.png" width="310" height="56"/></div>
     <div class="head" style="font-weight:bold">
-      <a class="head" href="OurStory.html">Our Story</a>
-      <a class="head" href="Icecream.html">Ice Cream</a>
-      <a class="head" href="ContactUs.html">Contact Us</a>
+      <a class="head" onclick="changeToOurStory();">Our Story</a>
+      <a class="head" onclick="changeToIceCream()">Ice Cream</a>
+      <a class="head" onclick="changeToContactUs()">Contact Us</a>
     </div>
 </div>
 
 
 <div>
-<iframe src="Home.html" width="100%" height="100%" scrolling="no" frameborder="0" marginwidth="0"> </iframe>
+<iframe src="Home.html" id="myHome" style="visibility:visible" width="100%" height="100%" scrolling="no" frameborder="0" marginwidth="0"> </iframe>
 </div>
+
+<div>
+<iframe src="OurStory.html" id="OurStory" style="visibility:hidden" width="0%" height="0%" scrolling="no" frameborder="0" marginwidth="0"> </iframe>
+</div>
+
+<div>
+<iframe src="Icecream.html" id="Icecream" style="visibility:hidden" width="0%" height="0%" scrolling="no" frameborder="0" marginwidth="0"> </iframe>
+</div>
+
+<div>
+<iframe src="ContactUs.html" id="ContactUs" style="visibility:hidden" width="0%" height="0%" scrolling="no" frameborder="0" marginwidth="0"> </iframe>
+</div>
+
+<script>
+var homeIn = document.getElementById('myHome');
+var ourSt = document.getElementById('OurStory');
+var iceCre = document.getElementById('Icecream');
+var contUs = document.getElementById('ContactUs');
+function changeToOurStory(){
+	ourSt.style.visibility = "visible";	
+	homeIn.style.visibility = "hidden";
+	iceCre.style.visibility = "hidden";
+	contUs.style.visibility = "hidden";
+}
+function changeToIceCream(){
+	ourSt.style.visibility = "hidden";	
+	homeIn.style.visibility = "hidden";
+	iceCre.style.visibility = "visible";
+	contUs.style.visibility = "hidden";
+}
+function changeToContactUs(){
+	ourSt.style.visibility = "hidden";	
+	homeIn.style.visibility = "hidden";
+	iceCre.style.visibility = "hidden";
+	contUs.style.visibility = "visible";
+}
+function changeToHome(){
+	ourSt.style.visibility = "hidden";	
+	homeIn.style.visibility = "visible";
+	iceCre.style.visibility = "hidden";
+	contUs.style.visibility = "hidden";
+}
+</script>
 
 
 <footer>
